@@ -25,6 +25,8 @@ class PathRenderer {
                 val v = path.valueAt(vec2(), t)
                 vertices.add(v.x, v.y)
             }
+            val v = path.valueAt(vec2(), d)
+            vertices.add(v.x, v.y)
             vertices.shrink()
             it.color = color
             it.polyline(vertices.items)

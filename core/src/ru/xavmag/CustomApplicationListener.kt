@@ -144,14 +144,14 @@ class CustomApplicationListener : KtxApplicationAdapter {
 
                     visLabel("Color: ").cell(colspan = 2)
                     firstColorPicker = colorPicker {
-                        selected = "Red"
+                        selected = "Green"
                         onChange {
                             firstParameters.color = Colors.get(selected.uppercase())
                         }
                     }.cell(colspan = 2)
                     visLabel("Color: ").cell(colspan = 2)
                     secondColorPicker = colorPicker {
-                        selected = "Green"
+                        selected = "Red"
                         onChange {
                             secondParameters.color = Colors.get(selected.uppercase())
                         }
