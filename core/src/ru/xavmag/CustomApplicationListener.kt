@@ -164,7 +164,7 @@ class CustomApplicationListener : KtxApplicationAdapter {
                         notEmpty(tField, "t0 must mot be empty")
                         tField.onChange {
                             try {
-                                firstParameters.t0 = text.toFloat()
+                                firstParameters.apply { val nt = text.toFloat(); if (t1 > nt) { t0 = nt } }
                             } catch (e: Exception) { }
                         }
 
@@ -174,7 +174,7 @@ class CustomApplicationListener : KtxApplicationAdapter {
                         notEmpty(tField, "t1 must mot be empty")
                         tField.onChange {
                             try {
-                                firstParameters.t1 = text.toFloat()
+                                firstParameters.apply { val nt = text.toFloat(); if (nt > t0) { t1 = nt } }
                             } catch (e: Exception) { }
                         }
 
@@ -184,7 +184,7 @@ class CustomApplicationListener : KtxApplicationAdapter {
                         notEmpty(tField, "t0 must mot be empty")
                         tField.onChange {
                             try {
-                                secondParameters.t0 = text.toFloat()
+                                secondParameters.apply { val nt = text.toFloat(); if (t1 > nt) { t0 = nt } }
                             } catch (e: Exception) { }
                         }
 
@@ -194,7 +194,7 @@ class CustomApplicationListener : KtxApplicationAdapter {
                         notEmpty(tField, "t1 must mot be empty")
                         tField.onChange {
                             try {
-                                secondParameters.t1 = text.toFloat()
+                                secondParameters.apply { val nt = text.toFloat(); if (nt > t0) { t1 = nt } }
                             } catch (e: Exception) { }
                         }
 
